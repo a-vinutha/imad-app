@@ -19,7 +19,7 @@ var articles = {
         <div>
             <p>Here goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article one
             </p></div>`
-}
+},
 
  `article-two` : {
     title : 'Article Two',
@@ -32,7 +32,7 @@ var articles = {
         </div><div><p>Here goes the contents for Article Two.Here goes the contents for Article Two.Here goes the contents for Article Two.Here goes the contents for Article Two.Here goes the contents for Article Two.
             </p>
         </div>`
-}
+},
 
  `article-three` : {
     title : 'Article Three',
@@ -46,7 +46,7 @@ var articles = {
             </p>
         </div>`
 }
-}
+};
 
 function createTemplate(data){
     var title = data.title;
@@ -79,8 +79,6 @@ function createTemplate(data){
 
 return htmlTemplate;    
 }
-
-
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
