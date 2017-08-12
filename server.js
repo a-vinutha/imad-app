@@ -72,7 +72,6 @@ app.get('/', function (req, res) {
 
 app.get('/:articleName', function(req,res){
     var articleName = req.param.articleName;
-    res.send(articleName);
    res.send(createTemplate(articles[articleName]));
 });
 
@@ -83,7 +82,6 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
