@@ -6,47 +6,33 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-    `article-one`: {
+    'article-one': {
     title : 'Article One',
     heading : 'Article-One',
-    content : `<div><p>Here goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article one
+    content : `<div><p>Here goes the contents for Article one
             </p>
-        </div>
-        <div>
-            <p>Here goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article one
-            </p>
-        </div>
-        <div>
-            <p>Here goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article oneHere goes the contents for Article one
-            </p></div>`
-},
-
- `article-two` : {
+        </div>`
+    },
+    
+    'article-two': {
     title : 'Article Two',
     heading : 'Article-Two',
-    content : `<div><p>Here goes the contents for Article Two.Here goes the contents for Article Two.Here goes the contents for Article Two.Here goes the contents for Article Two.Here goes the contents for Article Two.
+    content : `<div><p>Here goes the contents for Article Two.
             </p>
         </div>
-        <div><p>Here goes the contents for Article Two.Here goes the contents for Article Two.Here goes the contents for Article Two.Here goes the contents for Article Two.Here goes the contents for Article Two.
-            </p>
-        </div><div><p>Here goes the contents for Article Two.Here goes the contents for Article Two.Here goes the contents for Article Two.Here goes the contents for Article Two.Here goes the contents for Article Two.
-            </p>
-        </div>`
-},
-
- `article-three` : {
+            `
+    },
+    
+ 'article-three': {
     title : 'Article Three',
     heading : 'Article-Three',
-    content : `<div><p>Here goes the contents for Article Three.Here goes the contents for Article Three.Here goes the contents for Article Three.Here goes the contents for Article Three.Here goes the contents for Article Three.
+    content : `<div><p>Here goes the contents for Article Three.
             </p>
         </div>
-        <div><p>Here goes the contents for Article Three.Here goes the contents for Article Three.Here goes the contents for Article Three.Here goes the contents for Article Three.Here goes the contents for Article Three.
-            </p>
-        </div><div><p>Here goes the contents for Article Three.Here goes the contents for Article Three.Here goes the contents for Article Three.Here goes the contents for Article Three.Here goes the contents for Article Three.
-            </p>
-        </div>`
+        `
 }
 };
+
 
 function createTemplate(data){
     var title = data.title;
