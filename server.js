@@ -51,10 +51,11 @@ function createTemplate(data){
     var heading = data.heading;
     var content = data.content;
     
-    var htmlTemplate = `<html>
+    var htmlTemplate = `
+    <html>
     <head>
         <title>
-            $(title)
+            ${title}
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -65,11 +66,14 @@ function createTemplate(data){
             <a href="/">Home</a>
         </div>
         <hr/>
-        <h3>$(heading)</h3>
-        $(content)
+        <h3>
+        ${heading}
+        </h3>
+        ${content}
         </div>
     </body>
-</html>`;
+</html>
+`;
 
 return htmlTemplate;    
 }
