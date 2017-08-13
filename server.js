@@ -23,7 +23,7 @@ var articles = {
             `
     },
     
- 'article-three': {
+    'article-three': {
     title: 'Article Three',
     heading: 'Article-Three',
     content: `<div><p>Here goes the contents for Article Three.
