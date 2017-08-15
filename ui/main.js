@@ -13,6 +13,6 @@ button.onclick = function(){
       }
     };
     
-    request.open('GET','http://vinuthaadella/imad.hasura.io/counter', true);
+    request.open('GET','http://vinuthaadella.imad.hasura.io/counter', true);
     request.send(null);
 };
