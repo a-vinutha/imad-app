@@ -16,3 +16,5 @@ button.onclick = function(){
     request.open('GET','http://vinuthaadella.imad.hasura-app.io/counter', true);
     request.send(null);
 };
+
+var input = document.getElementById('name');
