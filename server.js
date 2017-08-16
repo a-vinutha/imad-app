@@ -75,7 +75,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/submit_name/:name',function(req,res){
+app.get('/submit-name/:name',function(req,res){
    var name = req.params.name;
    names.push(name);
    req.send(names);
