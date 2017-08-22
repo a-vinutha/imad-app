@@ -1,20 +1,3 @@
-var button = document.getElementById('counter');
-
-button.onclick = function(){
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function(){
-      if(request.readystate == XMLHttpRequest.OPEN)  {
-          if(request.status == 200){
-              var counter = request.responseText;
-              var span = document.getElementById('count');
-              span.innerHTML = counter.toString();
-          }
-      }
-    };
-    
-    request.open('GET','http://vinuthaadella.imad.hasura-app.io/counter', true);
-    request.send(null);
-};
 
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
@@ -23,21 +6,23 @@ submit.onclick = function(){
     
     request.onreadystatechange = function(){
       if(request.readystate == XMLHttpRequest.OPEN)  {
-          if(request.status == 200){
-                var names = request.responseText;
-                names = JSON.parse(names);
-                var list = '';
-                for(var i =0 ; i< names.length;i++){
-                    list += '<li>' + names[i] + '</li>';
-                }
-                var ul = document.getElementById('namelist');
-                ul.innerHTML = list;
+          if(request.status === 200){
+            console.log('user logged in');  
+            alert('login successful');
+          }
+          else if (request.status === 403){
+              alert('Login Details Incorrect');
+          }
+          else if (request.status === 500){
+              alert('Server Error');
           }
       }
     };
     
-    var nameInput = document.getElementById('name');
-    var name = nameInput.value;
-    request.open('GET','http://vinuthaadella.imad.hasura-app.io/submit-name?name='+name, true);
-    request.send(null);
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    console.log(username);
+    console.log(password);
+    request.open('POST','http://vinuthaadella.imad.hasura-app.io/submit-name?name='+name, true);
+    request.send(JSON.stringify({username: username,password: password}));
 };
