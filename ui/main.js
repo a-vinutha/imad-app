@@ -5,6 +5,7 @@ submit.onclick = function(){
     var request = new XMLHttpRequest();
     
     request.onreadystatechange = function(){
+        console.log('ReadyState:' + request.readyState);
       if(request.readystate == XMLHttpRequest.DONE)  {
           if(request.status === 200){
             console.log('user logged in');  
